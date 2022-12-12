@@ -17,14 +17,21 @@ class MyThemeData {
     appBarTheme: AppBarTheme(
       elevation: 0,
       backgroundColor: primirayColor,
+      titleTextStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedItemColor: primirayColor,
-      unselectedItemColor: greyColor
+      unselectedItemColor: greyColor,
+      showUnselectedLabels: false,
+      showSelectedLabels: false
+    ),
+    bottomAppBarTheme: BottomAppBarTheme(
+      shape: CircularNotchedRectangle(),
+      elevation: 0
     ),
     textTheme: TextTheme(
-      titleMedium: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: primirayColor),
-      titleSmall: TextStyle(fontSize: 12, fontWeight: FontWeight.normal, color: greyColor),
+      titleMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: primirayColor),
+      titleSmall: TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Colors.black54),
       bodySmall: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold ),
 
     )
