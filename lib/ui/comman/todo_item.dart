@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:todo_c7_mon/model/TodoDM.dart';
 
 class TodoItem extends StatelessWidget {
-
+  TodoDM todo;
+  TodoItem(this.todo);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,11 +22,12 @@ class TodoItem extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text("Play basket ball",
+                Text(todo.title,
                    textAlign: TextAlign.start,
                   style: Theme.of(context).textTheme.titleMedium,),
                 SizedBox(height: 12,),
-                Text("10:30 am", style: Theme.of(context).textTheme.titleSmall,),
+                Text(todo.description,
+                  style: Theme.of(context).textTheme.titleSmall,),
               ],
             ),
           ),
