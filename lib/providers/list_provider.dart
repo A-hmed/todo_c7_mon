@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-
 import '../model/TodoDM.dart';
 
 class ListProvider extends ChangeNotifier {
@@ -34,6 +33,7 @@ class ListProvider extends ChangeNotifier {
 
     notifyListeners();
   }
+
   changeDate(DateTime newDate){
     selectedDate = newDate;
     getTodosFromFirestore();
